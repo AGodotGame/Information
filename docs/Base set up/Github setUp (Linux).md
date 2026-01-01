@@ -44,3 +44,24 @@ git remote -v
 origin	git@github.com:AGodotGame/AdventureOne.git (fetch)
 origin	git@github.com:AGodotGame/AdventureOne.git (push)
 ```
+
+### Añadir un submodulo
+
+Crearemos una carpeta dentro inicializaremos un repositorio de git
+
+Luego subimos a github, y lo descargaremos dentro de el repositorio
+
+Par añadirlo a submodulos haremos lo siguiente:
+```
+git config -f .gitmodules submodule.ServerAPI.path ServerAPI 
+git config -f .gitmodules submodule.ServerAPI.url git@github.com:AGodotGame/ServerAPI.git
+```
+El primero crea el modulo y lo establece con el nombre 
+El segundo lo vincula al repositorio externo
+
+Para actualizar todos recursivamente iremos al git principal y ejecutaremos:
+```
+git submodule update --init --recursive
+```
+
+Si salta algún error es porque los submódulos no están bien configurados

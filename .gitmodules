@@ -1,0 +1,18 @@
+[submodule "ServerAPI"]
+	path = ServerAPI
+	url = git@github.com:AGodotGame/ServerAPI.git
+[submodule "env"]
+	path = env
+	url = git@github.com:AGodotGame/env.git
+[submodule "AdventureOne"]
+	path = AdventureOne
+	url = git@github.com:AGodotGame/AdventureOne.git
+[submodule "assets"]
+	path = assets
+	url = git@github.com:AGodotGame/assets.git
+[submodule "bd_postgresql"]
+	path = bd_postgresql
+	url = git@github.com:AGodotGame/bd_postgresql.git
+[submodule "db-postgresql"]
+	path = db-postgresql
+	url = git@github.com:AGodotGame/db-postgresql.git
