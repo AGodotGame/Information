@@ -1,0 +1,54 @@
+{
+  "show-add-list": true,
+  "date-colors": [
+    {
+      "distance": 3,
+      "unit": "days",
+      "direction": "after",
+      "color": "rgba(244, 201, 18, 1)"
+    },
+    {
+      "distance": 1,
+      "unit": "days",
+      "direction": "after",
+      "isBefore": true,
+      "color": "rgba(253, 23, 23, 1)"
+    },
+    {
+      "distance": 3,
+      "unit": "weeks",
+      "direction": "after",
+      "color": "rgba(111, 239, 0, 1)"
+    }
+  ],
+  "tag-colors": [
+    {
+      "tagKey": "#API",
+      "color": "rgba(255, 222, 0, 1)",
+      "backgroundColor": "rgba(255, 207, 0, 0.1)"
+    },
+    {
+      "tagKey": "#GAME",
+      "color": "rgba(0, 254, 63, 1)",
+      "backgroundColor": "rgba(1, 255, 27, 0.1)"
+    },
+    {
+      "tagKey": "#DOCUMENTATION",
+      "color": "rgba(224, 0, 0, 1)",
+      "backgroundColor": "rgba(238, 27, 27, 0.1)"
+    },
+    {
+      "tagKey": "#KNOWLEDGE",
+      "color": "rgba(137, 193, 250, 1)",
+      "backgroundColor": "rgba(48, 108, 241, 0.1)"
+    }
+  ],
+  "move-tags": false,
+  "metadata-keys": [],
+  "show-checkboxes": true,
+  "new-card-insertion-method": "prepend-compact",
+  "move-dates": true,
+  "new-note-folder": "Research/Desarrollos",
+  "new-note-template": "a.md",
+  "tag-action": "kanban"
+}

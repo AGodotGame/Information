@@ -1,0 +1,251 @@
+{
+  "main": {
+    "id": "27f061ca3f14a38f",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e5c91f8abe7bf34",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "549a1b90f156f060",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Base set up/Github setUp (Linux).md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Github setUp (Linux)"
+            }
+          },
+          {
+            "id": "5b3a012ba9e912fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Basic knowledge/Commit basics (Ampliable).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Commit basics (Ampliable)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "710790e88ec33cef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "98bb1ed83e5fb569",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bec64125241eda8d",
+    "type": "split",
+    "children": [
+      {
+        "id": "75e46b07d2a6289e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0847becf2501be87",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "82c388e2e0b0051d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e7e5aa84b4f13fed",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "25322de64ac47506",
+    "type": "split",
+    "children": [
+      {
+        "id": "cfe41d7895788bb4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7744b6140f9e4cc7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Research/Tareas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Tareas"
+            }
+          },
+          {
+            "id": "14eb7751cf12cc5f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Research/Tareas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Tareas"
+            }
+          },
+          {
+            "id": "bf7b5bf1ead493cc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ea2ef5dbfe8d1a59",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "b03af6921999341d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Research/Tareas.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Tareas"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "publish:Publish changes...": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "549a1b90f156f060",
+  "lastOpenFiles": [
+    "index.md",
+    "Base set up/Github setUp (Linux).md",
+    "Base set up/Full SetUp.md",
+    "Basic knowledge/Commit basics (Ampliable).md",
+    "Research/Tareas.md",
+    "styles/theme.css",
+    "styles/themes.css",
+    "assets",
+    "Untitled.md",
+    "API",
+    "Information",
+    "Basic knowledge/DataBase Connection (WIP).md",
+    "Basic knowledge/Team Workflow (Ampliable).md",
+    "Basic knowledge/Ordering the folders (WIP).md",
+    "Basic knowledge/Commit organization (WIP).md",
+    "Research/Información a tener en cuenta.md",
+    "Ass.md",
+    "Research/Untitled.md",
+    "Research/Archived",
+    "Research/Default template.md",
+    "Research/Base research.md",
+    "Research/Aportes.md",
+    "Research/Archived/Archived.md",
+    "Research/Desarrollos/a API@{2025-12-24}.md",
+    "Research/Desarrollos/a API@{2025-12-24} @{2025-12-31}.md",
+    "Research/Desarrollos",
+    "Research/Untitled.canvas",
+    "Basic knowledge",
+    "Research",
+    "Base set up"
+  ]
+}

@@ -1,0 +1,2 @@
+No hay nada que hablar aqui, pau sabe, puede hacer esquema en caso de necesitarse
+Aquí se tiene que explicar el funcionamiento y organización de los módulos, submódulos y gestión de repositorios, orientado sobre todo a la separación de proyectos y subida de todos los archivos de imagen y sonido.

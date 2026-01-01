@@ -1,0 +1,48 @@
+site_name: Mi Proyecto
+
+theme:
+  name: material
+  language: es
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+
+  features:
+    - navigation.top
+    - navigation.sections
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  palette:
+    # Revisar modo claro
+    - scheme: default
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+
+    # Este esta bien
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+
+plugins:
+  - search
+  - awesome-pages
+
+hooks:
+  - hooks/obsidian_kanban.py
+
+extra_css:
+  - styles/light.css
+  - styles/theme.css
+  - styles/kanban.css
+

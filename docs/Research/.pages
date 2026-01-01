@@ -1,0 +1,7 @@
+title: Research
+nav:
+  - "Información a tener en cuenta.md"
+  - Aportes.md
+  - Tareas.md
+  - "Base research.md"
+  - '... | regex=^(?!Default template\.md$).*\.md$'

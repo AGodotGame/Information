@@ -1,0 +1,10 @@
+/* Solo modo claro: baja la luminosidad del fondo */
+html[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f1f2f5; /* gris claro suave */
+}
+
+/* Por si algún estilo lo pisa, fuerza el fondo del contenedor */
+html[data-md-color-scheme="default"] .md-main,
+html[data-md-color-scheme="default"] .md-container {
+  background: var(--md-default-bg-color);
+}

@@ -1,0 +1,8 @@
+{
+  "__default__": { "bg": "#8080801a", "fg": "#cfcfcf" },
+
+  "API": { "bg": "#ffcf001a", "fg": "#ffde00" },
+  "GAME": { "bg": "#01ff1b1a", "fg": "#00fe3f" },
+  "DOCUMENTATION": { "bg": "#ee1b1b1a", "fg": "#e00000" },
+  "KNOWLEDGE": { "bg": "#306cf11a", "fg": "#89c1fa" }
+}
