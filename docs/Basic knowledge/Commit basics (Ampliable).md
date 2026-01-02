@@ -4,8 +4,9 @@
 - `git add .`
 - `git commit -m "mensaje"`
 - `git push`
+- `git submodule update --init --recursive` Este actualiza todos los submódulos
 
-### Ver cambios e historial
+	### Ver cambios e historial
 - `git diff`
 - `git diff --staged`
 - `git log --oneline --decorate --graph --all`
