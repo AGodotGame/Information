@@ -1,4 +1,4 @@
-site_name: Mi Proyecto
+site_name: AdventureOne
 
 theme:
   name: material
@@ -39,7 +39,12 @@ plugins:
   - awesome-pages
 
 hooks:
-  - hooks/obsidian_kanban.py
+  - hooks/hook.py
+  - hooks/tag_colors.py
+  - hooks/styles.py
+  - hooks/script.py
+  - hooks/parse.py
+  - hooks/links.py
 
 extra_css:
   - styles/light.css

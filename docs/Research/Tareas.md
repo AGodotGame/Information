@@ -6,10 +6,10 @@ kanban-plugin: board
 
 ## Desarrollo
 
+- [ ] #API
 - [ ] [[Default template]]
 - [x] [a API@{2025-12-24} ]@{2025-12-31}
-- [ ] a #GAME @{2026-01-05}
-- [ ] aa #API @{2025-12-31}
+- [ ] [[a GAME @{2026-01-05}]]
 - [ ] Aaaa
 
 
@@ -29,19 +29,15 @@ kanban-plugin: board
 
 
 
-## Archivado
-
-**Complete**
-
-
 ***
 
 ## Archive
 
 - [ ] [[Ass]]
+- [ ] [[ee API @{2025-12-31}]]
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","list-collapse":[false,false,false,false,false,false]}
+{"kanban-plugin":"board","list-collapse":[false,false,false,false,false]}
 ```
 %%
