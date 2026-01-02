@@ -6,6 +6,7 @@ kanban-plugin: board
 
 ## Desarrollo
 
+- [ ] [[Diseño de la base de datos]]
 - [ ] #API
 - [ ] [[Default template]]
 - [x] [a API@{2025-12-24} ]@{2025-12-31}

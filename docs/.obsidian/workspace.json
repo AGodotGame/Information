@@ -25,51 +25,39 @@
                   ]
                 }
               },
-              "icon": "lucide-trello",
-              "title": "Tareas"
+              "icon": "lucide-ghost",
+              "title": "kanban"
             }
           },
           {
             "id": "5b3a012ba9e912fe",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Research/Tareas.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "Basic knowledge/Commit organization (WIP).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "Tareas"
+              "icon": "lucide-file",
+              "title": "Commit organization (WIP)"
             }
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "b107f1c2ce797b12",
+        "id": "ddfdb2d91b8822c3",
         "type": "tabs",
         "children": [
           {
-            "id": "5d4bf73521311193",
+            "id": "c8a9af27f411b500",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Research/Archived/ee API @{2025-12-31}.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ee API @{2025-12-31}"
+              "title": "New tab"
             }
           }
         ]
@@ -236,31 +224,35 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0847becf2501be87",
+  "active": "5b3a012ba9e912fe",
   "lastOpenFiles": [
-    "Research/Archived/ee API @{2025-12-31}.md",
+    "Diseño de la base de datos.md",
+    "Basic knowledge/Commit organization (WIP).md",
+    "Basic knowledge/DataBase Connection (WIP).md",
+    "Basic knowledge/Ordering the folders (WIP).md",
+    "Basic knowledge/Team Workflow (Ampliable).md",
+    "Basic knowledge/Commit basics (Ampliable).md",
+    "index.md",
     "Research/Tareas.md",
+    "Research/Aportes.md",
+    "Base set up/Github setUp (Linux).md",
+    "Base set up/Full SetUp.md",
+    "Research/Developments/test.md",
+    "Research/Developments/a GAME @{2026-01-05}.md",
+    "Research/Developments",
+    "Research/Archived/ee API @{2025-12-31}.md",
     "Research/Desarrollos/a GAME @{2026-01-05}.md",
     "Research/Desarrollos/test.md",
     "Research/Archived/test2.md",
     "Research/Desarrollos/test",
-    "Research/Aportes.md",
     "Research/Base research.md",
     "Research/Default template.md",
-    "Basic knowledge/Commit basics (Ampliable).md",
-    "Base set up/Github setUp (Linux).md",
-    "index.md",
-    "Base set up/Full SetUp.md",
     "styles/theme.css",
     "styles/themes.css",
     "assets",
     "Untitled.md",
     "API",
     "Information",
-    "Basic knowledge/DataBase Connection (WIP).md",
-    "Basic knowledge/Team Workflow (Ampliable).md",
-    "Basic knowledge/Ordering the folders (WIP).md",
-    "Basic knowledge/Commit organization (WIP).md",
     "Research/Información a tener en cuenta.md",
     "Ass.md",
     "Research/Untitled.md",
@@ -270,7 +262,6 @@
     "Research/Desarrollos/a API@{2025-12-24} @{2025-12-31}.md",
     "Research/Desarrollos",
     "Research/Untitled.canvas",
-    "Basic knowledge",
-    "Research"
+    "Basic knowledge"
   ]
 }

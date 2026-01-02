@@ -1,5 +1,10 @@
 site_name: AdventureOne
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 theme:
   name: material
   language: es
@@ -12,6 +17,7 @@ theme:
     - content.code.copy
     - search.suggest
     - search.highlight
+    - navigation.indexes
 
   font:
     text: Inter
@@ -40,14 +46,13 @@ plugins:
 
 hooks:
   - hooks/hook.py
-  - hooks/tag_colors.py
-  - hooks/styles.py
-  - hooks/script.py
-  - hooks/parse.py
-  - hooks/links.py
+  - hooks/dir_index.py
+  - hooks/callouts.py
 
 extra_css:
   - styles/light.css
   - styles/theme.css
   - styles/kanban.css
+
+docs_dir: docs
 

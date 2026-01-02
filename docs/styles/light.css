@@ -1,10 +1,132 @@
-/* Solo modo claro: baja la luminosidad del fondo */
-html[data-md-color-scheme="default"] {
-  --md-default-bg-color: #f1f2f5; /* gris claro suave */
+/* ======================================================
+   LIGHT THEME: "Baba Pastel + Readable Navbar"
+   - Navbar legible
+   - Velo gris 10% en fondos (modo light)
+   ====================================================== */
+
+:root{
+  --light-gray-overlay: rgba(120, 120, 120, 0.10); /* ✅ velo 10% gris */
 }
 
-/* Por si algún estilo lo pisa, fuerza el fondo del contenedor */
-html[data-md-color-scheme="default"] .md-main,
-html[data-md-color-scheme="default"] .md-container {
-  background: var(--md-default-bg-color);
+/* ✅ variables para modo claro */
+[data-md-color-scheme="default"],
+body[data-md-color-scheme="default"],
+html[data-md-color-scheme="default"]{
+  /* Brand */
+  --md-primary-fg-color: #6b8ab6;          /* sky */
+  --md-primary-fg-color--light: #8c99bb;
+  --md-primary-fg-color--dark: #4f6f9a;
+
+  --md-accent-fg-color: #ce91ae;           /* dusty rose */
+  --md-accent-fg-color--transparent: rgba(206,145,174,0.18);
+
+  /* ✅ CLAVE: color del texto/íconos en navbar/tabs */
+  --md-primary-bg-color: #1f2937;          /* texto oscuro legible */
+  --md-primary-bg-color--light: rgba(31,41,55,0.72);
+
+  /* Background / text (evita blanco puro) */
+  --md-default-bg-color: #f4f1f5;
+  --md-default-fg-color: #1f2937;
+  --md-default-fg-color--light: rgba(31,41,55,0.72);
+  --md-default-fg-color--lighter: rgba(31,41,55,0.40);
+  --md-default-fg-color--lightest: rgba(31,41,55,0.18);
+
+  /* Links */
+  --md-typeset-a-color: #4f6f9a;
+
+  /* Code */
+  --md-code-bg-color: rgba(107,138,182,0.12);
+  --md-code-fg-color: #111827;
+}
+
+/* ✅ Fondo pastel suave + velo gris 10% */
+[data-md-color-scheme="default"] .md-main,
+body[data-md-color-scheme="default"] .md-main,
+html[data-md-color-scheme="default"] .md-main{
+  background:
+    linear-gradient(0deg, var(--light-gray-overlay), var(--light-gray-overlay)),
+    radial-gradient(900px 600px at 15% 0%, rgba(111,138,181,0.28), transparent 60%),
+    radial-gradient(900px 650px at 85% 10%, rgba(206,145,174,0.20), transparent 62%),
+    linear-gradient(
+      180deg,
+      rgba(111,138,181,0.18) 0%,
+      rgba(174,171,196,0.14) 38%,
+      rgba(217,191,204,0.18) 100%
+    ),
+    var(--md-default-bg-color);
+}
+
+/* ✅ Navbar/Tabs: más “sólido” y legible (sin distopía) */
+[data-md-color-scheme="default"] .md-header,
+body[data-md-color-scheme="default"] .md-header,
+html[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs,
+body[data-md-color-scheme="default"] .md-tabs,
+html[data-md-color-scheme="default"] .md-tabs{
+  background:
+    linear-gradient(0deg, var(--light-gray-overlay), var(--light-gray-overlay)),
+    linear-gradient(
+      90deg,
+      rgba(107,138,182,0.22),
+      rgba(174,171,196,0.18),
+      rgba(206,145,174,0.18)
+    ),
+    rgba(248,246,249,0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(31,41,55,0.10);
+}
+
+/* ✅ Fuerza legibilidad del texto/íconos del header */
+[data-md-color-scheme="default"] .md-header__title,
+[data-md-color-scheme="default"] .md-header__button,
+[data-md-color-scheme="default"] .md-tabs__link,
+body[data-md-color-scheme="default"] .md-header__title,
+body[data-md-color-scheme="default"] .md-header__button,
+body[data-md-color-scheme="default"] .md-tabs__link,
+html[data-md-color-scheme="default"] .md-header__title,
+html[data-md-color-scheme="default"] .md-header__button,
+html[data-md-color-scheme="default"] .md-tabs__link{
+  color: rgba(31,41,55,0.88);
+}
+
+/* Tabs active/hover */
+[data-md-color-scheme="default"] .md-tabs__link:hover,
+[data-md-color-scheme="default"] .md-tabs__link--active,
+body[data-md-color-scheme="default"] .md-tabs__link:hover,
+body[data-md-color-scheme="default"] .md-tabs__link--active,
+html[data-md-color-scheme="default"] .md-tabs__link:hover,
+html[data-md-color-scheme="default"] .md-tabs__link--active{
+  color: #4f6f9a;
+}
+
+/* ✅ “Tarjeta” del contenido: también con velo gris 10% */
+[data-md-color-scheme="default"] .md-content__inner,
+body[data-md-color-scheme="default"] .md-content__inner,
+html[data-md-color-scheme="default"] .md-content__inner{
+  background:
+    linear-gradient(0deg, var(--light-gray-overlay), var(--light-gray-overlay)),
+    rgba(255,255,255,0.64);
+  border: 1px solid rgba(31,41,55,0.10);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(31,41,55,0.06);
+  padding: 1.05rem 1.1rem;
+}
+
+@media (max-width: 44.9375em) {
+  [data-md-color-scheme="default"] .md-content__inner,
+  body[data-md-color-scheme="default"] .md-content__inner,
+  html[data-md-color-scheme="default"] .md-content__inner{
+    border-radius: 14px;
+    padding: .85rem .85rem;
+  }
+}
+
+/* Navegación lateral: hover/activo */
+[data-md-color-scheme="default"] .md-nav__link:hover,
+[data-md-color-scheme="default"] .md-nav__link--active,
+body[data-md-color-scheme="default"] .md-nav__link:hover,
+body[data-md-color-scheme="default"] .md-nav__link--active,
+html[data-md-color-scheme="default"] .md-nav__link:hover,
+html[data-md-color-scheme="default"] .md-nav__link--active{
+  color: #4f6f9a;
 }

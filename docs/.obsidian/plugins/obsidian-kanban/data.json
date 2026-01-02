@@ -48,7 +48,7 @@
   "show-checkboxes": true,
   "new-card-insertion-method": "prepend-compact",
   "move-dates": true,
-  "new-note-folder": "Research/Desarrollos",
+  "new-note-folder": "Research/Developments",
   "new-note-template": "a.md",
   "tag-action": "kanban"
 }

@@ -14,8 +14,23 @@ from script import KB_SCRIPT  # noqa: E402
 import parse as kb_parse  # noqa: E402
 import links as kb_links  # noqa: E402
 
-DEFAULT_DOC_ROOTS = ["research"]
-ARCHIVE_DOC_ROOTS = ["archivados", "research/archivados"]
+
+# ✅ NUEVOS ROOTS (prioridad primero)
+# Normal: preferir Developments (si está dentro de research y/o si es carpeta top-level)
+DEFAULT_DOC_ROOTS = [
+    "research/Developments",
+    "Developments",
+    "research",
+]
+
+# Archivados: preferir Archived (si está dentro de research y/o top-level)
+ARCHIVE_DOC_ROOTS = [
+    "research/Archived",
+    "Archived",
+    "research/archived",   # por si alguien lo escribió en minúsculas (opcional)
+]
+
+# "archiv" sigue funcionando porque "Archived" contiene "archiv"
 ARCHIVE_COL_KEYWORD = "archiv"
 
 

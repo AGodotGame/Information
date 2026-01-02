@@ -5,3 +5,5 @@ nav:
   - Tareas.md
   - "Base research.md"
   - '... | regex=^(?!Default template\.md$).*\.md$'
+  - Developments
+  - Archived
