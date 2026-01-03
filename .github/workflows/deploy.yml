@@ -3,6 +3,8 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -21,17 +23,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive  # si usas submódulos para traer docs de otros repos
+          fetch-depth: 1
+          submodules: false
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material
+          pip install -r requirements.txt
 
       - name: Build
         run: mkdocs build --clean
@@ -42,6 +45,7 @@ jobs:
           path: site
 
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     environment:
