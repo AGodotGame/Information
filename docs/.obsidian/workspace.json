@@ -33,34 +33,26 @@
             "id": "5b3a012ba9e912fe",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Basic knowledge/Commit organization (WIP).md",
-                "mode": "source",
-                "source": false
+                "file": "Research/Tareas.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                  ]
+                }
               },
-              "icon": "lucide-file",
-              "title": "Commit organization (WIP)"
+              "icon": "lucide-trello",
+              "title": "Tareas"
             }
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "ddfdb2d91b8822c3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "c8a9af27f411b500",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -226,16 +218,19 @@
   },
   "active": "5b3a012ba9e912fe",
   "lastOpenFiles": [
+    "Research/Developments/Reunion para ver resultados de los juegos @{2026-01-05}.md",
+    "Research/Tareas.md",
+    "Research/Developments/Hacer cambios para añadir personas a las tareas.md",
+    "Research/Developments/Hacer busqueda de funcionamiento de i18n.md",
+    "Basic knowledge/Commit organization (WIP).md",
     "styles/dark.css",
     "styles/light_extra.css",
     "Diseño de la base de datos.md",
-    "Basic knowledge/Commit organization (WIP).md",
     "Basic knowledge/DataBase Connection (WIP).md",
     "Basic knowledge/Ordering the folders (WIP).md",
     "Basic knowledge/Team Workflow (Ampliable).md",
     "Basic knowledge/Commit basics (Ampliable).md",
     "index.md",
-    "Research/Tareas.md",
     "Research/Aportes.md",
     "Base set up/Github setUp (Linux).md",
     "Base set up/Full SetUp.md",
@@ -259,9 +254,6 @@
     "Ass.md",
     "Research/Untitled.md",
     "Research/Archived",
-    "Research/Archived/Archived.md",
-    "Research/Desarrollos/a API@{2025-12-24}.md",
-    "Research/Desarrollos",
     "Research/Untitled.canvas"
   ]
 }

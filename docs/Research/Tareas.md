@@ -6,16 +6,15 @@ kanban-plugin: board
 
 ## Desarrollo
 
-- [ ] [[Diseño de la base de datos]]
-- [ ] #API
-- [ ] [[Default template]]
-- [x] [a API@{2025-12-24} ]@{2025-12-31}
-- [ ] [[a GAME @{2026-01-05}]]
-- [ ] Aaaa
+- [ ] [[Hacer busqueda de funcionamiento de i18n]]
+	#KNOWLEDGE @{2026-01-18}
+- [ ] [[Hacer cambios para añadir personas a las tareas]]
+	#DOCUMENTATION @{2026-01-06}
 
 
 ## To do
 
+- [ ] [[Reunion para ver resultados de los juegos ]] #GAME @{2026-01-05}
 
 
 ## En proceso
