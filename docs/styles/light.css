@@ -1,199 +1,216 @@
 /* ======================================================
-   LIGHT SKIN: "Arcade Solid" (NO pastel)
-   - Colores vivos (azul/verde/amarillo)
-   - Contenido transparente (glass, no tarjeta blanca)
-   - Solo modo LIGHT (scheme default)
+   LIGHT THEME: "Minecraft Green"
+   - Solo afecta a scheme: default
+   - Navbar verde Minecraft PLANO (sin texturas)
    ====================================================== */
 
+/* ---------- Base ---------- */
+:root{
+  --game-radius: 18px;
+  --game-shadow: 0 10px 28px rgba(31,41,55,.08);
+}
+
+/* ---------- Variables LIGHT ---------- */
 [data-md-color-scheme="default"],
 body[data-md-color-scheme="default"],
 html[data-md-color-scheme="default"]{
-  /* Colores “normales” (sólidos, no pastel) */
-  --md-primary-fg-color: #1d4ed8;          /* azul fuerte */
-  --md-primary-fg-color--light: #2563eb;
-  --md-primary-fg-color--dark: #1e40af;
+  --brand:  #3AA655;  /* verde estilo Minecraft (no fosfi) */
+  --brand2: #1e88e5;  /* azul cielo */
+  --brand3: #f6b73c;  /* amarillo cálido */
 
-  --md-accent-fg-color: #16a34a;           /* verde fuerte */
-  --md-accent-fg-color--transparent: rgba(22,163,74,0.18);
+  --md-primary-fg-color: var(--brand2);
+  --md-primary-fg-color--light: #39a6ff;
+  --md-primary-fg-color--dark: #1565c0;
 
-  --md-typeset-a-color: #0284c7;           /* links azul */
+  --md-accent-fg-color: var(--brand);
+  --md-accent-fg-color--transparent: rgba(58,166,85,0.14);
 
-  /* Texto/ink bien contrastado */
+  --md-typeset-a-color: var(--brand2);
+
+  /* fondo/fg */
+  --md-default-bg-color: #eaf2ff;
   --md-default-fg-color: #0f172a;
   --md-default-fg-color--light: rgba(15,23,42,0.72);
-  --md-default-fg-color--lighter: rgba(15,23,42,0.45);
-  --md-default-fg-color--lightest: rgba(15,23,42,0.22);
+  --md-default-fg-color--lighter: rgba(15,23,42,0.40);
+  --md-default-fg-color--lightest: rgba(15,23,42,0.18);
+
+  --md-code-bg-color: rgba(30,136,229,0.10);
+  --md-code-fg-color: #0f172a;
 }
 
-/* Fondo del sitio: colorido y “game”, sin ser pastel */
+/* ---------- Fondo LIGHT ---------- */
 [data-md-color-scheme="default"] .md-main,
 body[data-md-color-scheme="default"] .md-main,
 html[data-md-color-scheme="default"] .md-main{
   background:
-    /* glow colorido */
-    radial-gradient(1000px 700px at 12% 10%, rgba(29,78,216,0.30), transparent 60%),
-    radial-gradient(900px 650px at 88% 12%, rgba(22,163,74,0.22), transparent 62%),
-    radial-gradient(900px 650px at 55% 95%, rgba(234,179,8,0.18), transparent 60%),
-
-    /* textura sutil tipo “grid” (muy ligera) */
-    linear-gradient(rgba(15,23,42,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15,23,42,0.06) 1px, transparent 1px),
-
-    /* base */
-    #eaf2ff !important;
-
-  background-size:
-    auto,
-    auto,
-    auto,
-    64px 64px,
-    64px 64px,
-    auto;
-
+    radial-gradient(1100px 720px at 12% 10%, rgba(30,136,229,0.22), transparent 60%),
+    radial-gradient(1000px 680px at 88% 12%, rgba(58,166,85,0.20), transparent 62%),
+    radial-gradient(950px 680px at 55% 95%, rgba(246,183,60,0.16), transparent 60%),
+    var(--md-default-bg-color);
   background-attachment: fixed;
 }
 
-/* Header/Tabs con color (no corporativo) */
+/* ---------- Navbar/Tabs LIGHT (PLANO VERDE) ---------- */
 [data-md-color-scheme="default"] .md-header,
-[data-md-color-scheme="default"] .md-tabs,
 body[data-md-color-scheme="default"] .md-header,
-body[data-md-color-scheme="default"] .md-tabs,
 html[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs,
+body[data-md-color-scheme="default"] .md-tabs,
 html[data-md-color-scheme="default"] .md-tabs{
-  background:
-    linear-gradient(90deg,
-      rgba(29,78,216,0.35),
-      rgba(22,163,74,0.25),
-      rgba(234,179,8,0.18)
-    ),
-    rgba(255,255,255,0.70) !important;
-  border-bottom: 1px solid rgba(15,23,42,0.14);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, #3AA655 0%, #2E8B45 100%) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.14) !important;
+  box-shadow: 0 12px 26px rgba(15,23,42,0.14);
+  backdrop-filter: none;
 }
 
-/* Texto del header legible */
+/* Texto/iconos del header */
 [data-md-color-scheme="default"] .md-header__title,
 [data-md-color-scheme="default"] .md-header__button,
-[data-md-color-scheme="default"] .md-tabs__link{
-  color: rgba(15,23,42,0.92) !important;
+[data-md-color-scheme="default"] .md-tabs__link,
+body[data-md-color-scheme="default"] .md-header__title,
+body[data-md-color-scheme="default"] .md-header__button,
+body[data-md-color-scheme="default"] .md-tabs__link,
+html[data-md-color-scheme="default"] .md-header__title,
+html[data-md-color-scheme="default"] .md-header__button,
+html[data-md-color-scheme="default"] .md-tabs__link{
+  color: rgba(255,255,255,0.96) !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.22);
 }
 
-/* ✅ CLAVE: contenido NO blanco -> transparente/glass */
-[data-md-color-scheme="default"] .md-content__inner,
-body[data-md-color-scheme="default"] .md-content__inner,
-html[data-md-color-scheme="default"] .md-content__inner{
-  background: transparent !important;          /* <- lo que pedías */
-  border: 1px solid rgba(15,23,42,0.14);
-  border-radius: 18px;
-  box-shadow: 0 18px 44px rgba(15,23,42,0.10);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  position: relative;
+/* Tabs active/hover */
+[data-md-color-scheme="default"] .md-tabs__link:hover,
+[data-md-color-scheme="default"] .md-tabs__link--active{
+  color: rgba(255,255,255,0.98) !important;
+  border-bottom: 2px solid rgba(255,255,255,0.70);
 }
 
-/* capa “glass” interna (no es blanco sólido) */
-[data-md-color-scheme="default"] .md-content__inner::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius: inherit;
-  pointer-events:none;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
-}
-
-/* Sidebar/nav con vida */
-[data-md-color-scheme="default"] .md-nav__link:hover{
-  background: linear-gradient(90deg, rgba(29,78,216,0.18), rgba(22,163,74,0.12)) !important;
-  border-radius: 10px;
-}
-[data-md-color-scheme="default"] .md-nav__link--active{
-  background: linear-gradient(90deg, rgba(22,163,74,0.18), rgba(29,78,216,0.12)) !important;
-  border-radius: 10px;
-}
-
-/* Botón primary más “juego” */
-[data-md-color-scheme="default"] .md-typeset .md-button--primary{
-  background: linear-gradient(90deg, rgba(29,78,216,0.95), rgba(22,163,74,0.85)) !important;
-  border: 0 !important;
-  color: #fff !important;
-  border-radius: 14px;
-}
-
-/* Search sin caja gris */
+/* ---------- Searchbar LIGHT (legible sobre verde) ---------- */
 [data-md-color-scheme="default"] .md-search__form{
-  background: rgba(255,255,255,0.55) !important;
-  border: 1px solid rgba(15,23,42,0.14);
-  border-radius: 999px;
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.22) !important;
+  border: 1px solid rgba(255,255,255,0.32) !important;
+  border-radius: 999px !important;
+  backdrop-filter: blur(6px);
 }
-[data-md-color-scheme="default"] .md-content__inner::before{ background: linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0.10)); }
-/* ======================================================
-   FIXES (LIGHT): Search text + Sidebar title contrast
-   (pegar AL FINAL)
-   ====================================================== */
 
-/* 1) Searchbar: texto y placeholder visibles */
 [data-md-color-scheme="default"] .md-search__input,
 [data-md-color-scheme="default"] .md-search__input::placeholder{
-  color: rgba(15, 23, 42, 0.92) !important;
+  color: rgba(255,255,255,0.95) !important;
   opacity: 1 !important;
 }
-
 [data-md-color-scheme="default"] .md-search__input::placeholder{
-  color: rgba(15, 23, 42, 0.55) !important;
+  color: rgba(255,255,255,0.80) !important;
 }
 
-/* iconos del search */
 [data-md-color-scheme="default"] .md-search__icon,
 [data-md-color-scheme="default"] .md-search__icon svg{
-  color: rgba(15, 23, 42, 0.75) !important;
-  fill: rgba(15, 23, 42, 0.75) !important;
+  color: rgba(255,255,255,0.90) !important;
+  fill: rgba(255,255,255,0.90) !important;
 }
 
-/* fondo del search (por si el blur lo deja raro) */
-[data-md-color-scheme="default"] .md-search__form{
-  background: rgba(255,255,255,0.68) !important;
-  border: 1px solid rgba(15,23,42,0.16) !important;
+/* ---------- Quita “raya”/bordes raros en contenido ---------- */
+[data-md-color-scheme="default"] .md-content,
+[data-md-color-scheme="default"] .md-main__inner,
+[data-md-color-scheme="default"] .md-content__inner{
+  border-top: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+[data-md-color-scheme="default"] .md-content__inner::before,
+[data-md-color-scheme="default"] .md-content__inner::after{
+  content: none !important;
+  display: none !important;
 }
 
+/* ---------- Sidebar title (AdventureOne) ---------- */
+[data-md-color-scheme="default"] .md-nav__title{
+  background: rgba(255,255,255,0.70) !important;
+  border: 1px solid rgba(15,23,42,0.12) !important;
+  border-radius: 14px !important;
+  margin: .35rem .4rem .55rem !important;
+  padding: .55rem .75rem !important;
+  box-shadow: 0 10px 24px rgba(15,23,42,0.08) !important;
+}
+
+[data-md-color-scheme="default"] .md-nav__title .md-ellipsis{
+  color: rgba(15,23,42,0.96) !important;
+  font-weight: 900 !important;
+  letter-spacing: .3px;
+  display: inline-block;
+  padding-bottom: .22rem;
+  border-bottom: 3px solid rgba(58,166,85,0.65);
+  background-image: linear-gradient(90deg, rgba(58,166,85,0.20), rgba(255,255,255,0.00));
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  text-shadow: none !important;
+}
+
+/* ---------- Títulos + acentos ---------- */
+[data-md-color-scheme="default"] .md-typeset h1{
+  text-shadow: 0 12px 30px rgba(30,136,229,0.10);
+}
+[data-md-color-scheme="default"] .md-typeset h2{
+  border-left: 4px solid rgba(58,166,85,0.70) !important;
+  padding-left: .55rem;
+}
+
+/* Links */
+[data-md-color-scheme="default"] .md-typeset a{
+  color: var(--brand2) !important;
+}
+
+/* ---------- Callouts (Obsidian-like) ---------- */
+.md-typeset .admonition.info,
+.md-typeset .admonition.note,
+.md-typeset details.info,
+.md-typeset details.note{
+  border-left: .22rem solid #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+}
+.md-typeset .admonition.info > .admonition-title,
+.md-typeset .admonition.note > .admonition-title,
+.md-typeset details.info > summary,
+.md-typeset details.note > summary{
+  background: rgba(37, 99, 235, 0.12);
+  color: rgba(17, 24, 39, 0.92);
+}
 
 /* ======================================================
-   FIX (LIGHT): Sidebar title visible sin caja fea
-   - Quita la placa/cuadrado
-   - Deja un underline + contraste suave
+   NAV TITLE = MISMO FONDO QUE NAVBAR (LIGHT)
    ====================================================== */
 
-/* Quitar el “cuadro” si lo pusimos antes */
 [data-md-color-scheme="default"] .md-nav__title{
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  box-shadow: none !important;
+  /* mismo fondo que header/tabs */
+  background: linear-gradient(180deg, #3AA655 0%, #2E8B45 100%) !important;
+
+  border: 1px solid rgba(0,0,0,0.14) !important;
+  border-radius: 12px !important;
+
+  /* pegado y limpio */
+  margin: .35rem .4rem .55rem !important;
+  padding: .55rem .75rem !important;
+
+  box-shadow: 0 10px 22px rgba(15,23,42,0.14) !important;
 }
 
-/* Texto del título (AdventureOne) más visible */
+/* texto legible en verde */
 [data-md-color-scheme="default"] .md-nav__title,
 [data-md-color-scheme="default"] .md-nav__title .md-ellipsis,
 [data-md-color-scheme="default"] .md-nav__title .md-nav__button{
-  color: rgba(15, 23, 42, 0.96) !important;
-  text-shadow: none !important;
-  font-weight: 800 !important;
-  letter-spacing: .2px;
+  color: rgba(255,255,255,0.96) !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.22) !important;
+  font-weight: 900 !important;
 }
 
-/* Subrayado “game” suave (no caja) */
+/* subrayado suave (sin caja rara) */
 [data-md-color-scheme="default"] .md-nav__title .md-ellipsis{
-  display: inline-block;
-  padding-bottom: .25rem;
-  border-bottom: 2px solid rgba(29,78,216,0.38);  /* azul */
+  border-bottom: 2px solid rgba(255,255,255,0.65) !important;
+  background: none !important;
 }
 
-/* Detallito extra: mini brillo debajo (muy sutil) */
-[data-md-color-scheme="default"] .md-nav__title .md-ellipsis{
-  background-image: linear-gradient(90deg, rgba(29,78,216,0.18), rgba(22,163,74,0.14));
-  background-size: 100% 6px;
-  background-repeat: no-repeat;
-  background-position: 0 100%;
+/* Aumentar tamaño del logo en el header (Material) */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg{
+  height: 48px !important;  /* prueba 36/42/48 */
+  width: auto !important;
 }

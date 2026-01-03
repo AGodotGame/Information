@@ -8,8 +8,8 @@ markdown_extensions:
 theme:
   name: material
   language: es
-  logo: assets/logo.svg
-  favicon: assets/favicon.svg
+  logo: assets/logo.png
+  favicon: assets/favicon.png
 
   features:
     - navigation.top
@@ -50,9 +50,9 @@ hooks:
   - hooks/callouts.py
 
 extra_css:
+  - styles/kanban.css
   - styles/light.css
   - styles/dark.css
-  - styles/kanban.css
 
 docs_dir: docs
 

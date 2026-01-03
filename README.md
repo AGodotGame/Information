@@ -3,7 +3,16 @@ AdventureOne - Information
 WEB: https://agodotgame.github.io/Information/
 
 
-Version: 1.0.0.0
+## Version: 1.0.1.0
+
+Changelog:
+
+    - Se ha arreglado la vista de la vista principal
+    - Se ha agregado el verde como parte de la paleta principal de el tema claro
+    - Se ha agregado logo y favicon
+
+
+## Version: 1.0.0.0
 
 Changelog:
 

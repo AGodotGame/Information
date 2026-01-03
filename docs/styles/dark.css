@@ -75,8 +75,7 @@ html[data-md-color-scheme="slate"] .md-tabs{
 }
 
 /* ---------- Callouts (Obsidian-like) ---------- */
-
-/* LIGHT (por si se queda aquí por error, no molesta) */
+/* (No molesta tener LIGHT base; el override lo adapta) */
 .md-typeset .admonition.info,
 .md-typeset .admonition.note,
 .md-typeset details.info,
@@ -108,4 +107,72 @@ html[data-md-color-scheme="slate"] .md-tabs{
 [data-md-color-scheme="slate"] .md-typeset details.note > summary{
   background: rgba(96, 165, 250, 0.14);
   color: rgba(229, 231, 235, 0.92);
+}
+
+/* ======================================================
+   BRAND (DARK)
+   ====================================================== */
+[data-md-color-scheme="slate"]{
+  --brand: #a78bfa;
+  --brand2: #22d3ee;
+}
+
+/* títulos con acento */
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2{
+  text-shadow: 0 10px 30px rgba(167,139,250,0.10);
+}
+[data-md-color-scheme="slate"] .md-typeset h2{
+  border-left: 4px solid rgba(167,139,250,0.55);
+  padding-left: .55rem;
+}
+
+/* links */
+[data-md-color-scheme="slate"] .md-typeset a{
+  color: var(--brand2) !important;
+}
+
+/* ======================================================
+   NAV TITLE = MISMO FONDO QUE NAVBAR (DARK)
+   ====================================================== */
+
+[data-md-color-scheme="slate"] .md-nav__title{
+  /* mismo fondo que header/tabs */
+  background: linear-gradient(
+    90deg,
+    rgba(167,139,250,0.14),
+    rgba(34,211,238,0.10),
+    rgba(244,114,182,0.10)
+  ), rgba(11,16,32,0.75) !important;
+
+  border: 1px solid rgba(229,231,235,0.12) !important;
+  border-radius: 12px !important;
+
+  margin: .35rem .4rem .55rem !important;
+  padding: .55rem .75rem !important;
+
+  box-shadow: 0 12px 26px rgba(0,0,0,0.28) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* texto legible en dark */
+[data-md-color-scheme="slate"] .md-nav__title,
+[data-md-color-scheme="slate"] .md-nav__title .md-ellipsis,
+[data-md-color-scheme="slate"] .md-nav__title .md-nav__button{
+  color: rgba(229,231,235,0.96) !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35) !important;
+  font-weight: 900 !important;
+}
+
+/* subrayado suave (alineado con el “brand”) */
+[data-md-color-scheme="slate"] .md-nav__title .md-ellipsis{
+  border-bottom: 2px solid rgba(34,211,238,0.55) !important;
+  background: none !important;
+}
+
+/* Aumentar tamaño del logo en el header (Material) */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg{
+  height: 48px !important;  /* prueba 36/42/48 */
+  width: auto !important;
 }
