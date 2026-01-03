@@ -226,6 +226,8 @@
   },
   "active": "5b3a012ba9e912fe",
   "lastOpenFiles": [
+    "styles/dark.css",
+    "styles/light_extra.css",
     "Diseño de la base de datos.md",
     "Basic knowledge/Commit organization (WIP).md",
     "Basic knowledge/DataBase Connection (WIP).md",
@@ -259,9 +261,7 @@
     "Research/Archived",
     "Research/Archived/Archived.md",
     "Research/Desarrollos/a API@{2025-12-24}.md",
-    "Research/Desarrollos/a API@{2025-12-24} @{2025-12-31}.md",
     "Research/Desarrollos",
-    "Research/Untitled.canvas",
-    "Basic knowledge"
+    "Research/Untitled.canvas"
   ]
 }

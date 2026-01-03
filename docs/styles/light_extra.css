@@ -1,0 +1,80 @@
+/* ======================================================
+   LIGHT EXTRA (append-only)
+   - NO toca md-main, md-header, md-tabs
+   ====================================================== */
+
+[data-md-color-scheme="default"]{
+  --lx-sky: rgba(107,138,182,0.18);
+  --lx-rose: rgba(206,145,174,0.16);
+  --lx-lav: rgba(174,171,196,0.14);
+  --lx-butter: rgba(240,230,174,0.22);
+  --lx-border: rgba(31,41,55,0.10);
+  --lx-shadow: 0 10px 20px rgba(31,41,55,0.06);
+}
+
+/* H2/H3 con acento */
+[data-md-color-scheme="default"] .md-typeset h2{
+  padding-left: .55rem;
+  border-left: 4px solid rgba(107,138,182,0.55);
+}
+[data-md-color-scheme="default"] .md-typeset h3{
+  padding-left: .45rem;
+  border-left: 3px solid rgba(206,145,174,0.45);
+}
+
+/* HR degradado suave */
+[data-md-color-scheme="default"] .md-typeset hr{
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(107,138,182,0.00),
+    rgba(107,138,182,0.35),
+    rgba(206,145,174,0.28),
+    rgba(174,171,196,0.20),
+    rgba(206,145,174,0.00)
+  );
+}
+
+/* Blockquotes “card” */
+[data-md-color-scheme="default"] .md-typeset blockquote{
+  border-left-color: rgba(107,138,182,0.65);
+  background: linear-gradient(90deg, var(--lx-sky), rgba(255,255,255,0.18));
+  border-radius: 14px;
+  padding: .6rem .9rem;
+  box-shadow: 0 8px 18px rgba(31,41,55,0.05);
+}
+
+/* List markers con color */
+[data-md-color-scheme="default"] .md-typeset ul li::marker{
+  color: rgba(107,138,182,0.78);
+}
+[data-md-color-scheme="default"] .md-typeset ol li::marker{
+  color: rgba(206,145,174,0.72);
+  font-weight: 600;
+}
+
+/* Tablas más “card” */
+[data-md-color-scheme="default"] .md-typeset table:not([class]){
+  border: 1px solid rgba(31,41,55,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--lx-shadow);
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) thead th{
+  background: linear-gradient(90deg, var(--lx-butter), rgba(255,255,255,0.25));
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) tbody tr:hover{
+  background: rgba(206,145,174,0.06);
+}
+
+/* Code con borde suave */
+[data-md-color-scheme="default"] .md-typeset pre{
+  border: 1px solid rgba(31,41,55,0.10);
+  border-radius: 16px;
+  box-shadow: var(--lx-shadow);
+}
+[data-md-color-scheme="default"] .md-typeset code{
+  border: 1px solid rgba(31,41,55,0.10);
+  border-radius: 10px;
+}

@@ -1,132 +1,199 @@
 /* ======================================================
-   LIGHT THEME: "Baba Pastel + Readable Navbar"
-   - Navbar legible
-   - Velo gris 10% en fondos (modo light)
+   LIGHT SKIN: "Arcade Solid" (NO pastel)
+   - Colores vivos (azul/verde/amarillo)
+   - Contenido transparente (glass, no tarjeta blanca)
+   - Solo modo LIGHT (scheme default)
    ====================================================== */
 
-:root{
-  --light-gray-overlay: rgba(120, 120, 120, 0.10); /* ✅ velo 10% gris */
-}
-
-/* ✅ variables para modo claro */
 [data-md-color-scheme="default"],
 body[data-md-color-scheme="default"],
 html[data-md-color-scheme="default"]{
-  /* Brand */
-  --md-primary-fg-color: #6b8ab6;          /* sky */
-  --md-primary-fg-color--light: #8c99bb;
-  --md-primary-fg-color--dark: #4f6f9a;
+  /* Colores “normales” (sólidos, no pastel) */
+  --md-primary-fg-color: #1d4ed8;          /* azul fuerte */
+  --md-primary-fg-color--light: #2563eb;
+  --md-primary-fg-color--dark: #1e40af;
 
-  --md-accent-fg-color: #ce91ae;           /* dusty rose */
-  --md-accent-fg-color--transparent: rgba(206,145,174,0.18);
+  --md-accent-fg-color: #16a34a;           /* verde fuerte */
+  --md-accent-fg-color--transparent: rgba(22,163,74,0.18);
 
-  /* ✅ CLAVE: color del texto/íconos en navbar/tabs */
-  --md-primary-bg-color: #1f2937;          /* texto oscuro legible */
-  --md-primary-bg-color--light: rgba(31,41,55,0.72);
+  --md-typeset-a-color: #0284c7;           /* links azul */
 
-  /* Background / text (evita blanco puro) */
-  --md-default-bg-color: #f4f1f5;
-  --md-default-fg-color: #1f2937;
-  --md-default-fg-color--light: rgba(31,41,55,0.72);
-  --md-default-fg-color--lighter: rgba(31,41,55,0.40);
-  --md-default-fg-color--lightest: rgba(31,41,55,0.18);
-
-  /* Links */
-  --md-typeset-a-color: #4f6f9a;
-
-  /* Code */
-  --md-code-bg-color: rgba(107,138,182,0.12);
-  --md-code-fg-color: #111827;
+  /* Texto/ink bien contrastado */
+  --md-default-fg-color: #0f172a;
+  --md-default-fg-color--light: rgba(15,23,42,0.72);
+  --md-default-fg-color--lighter: rgba(15,23,42,0.45);
+  --md-default-fg-color--lightest: rgba(15,23,42,0.22);
 }
 
-/* ✅ Fondo pastel suave + velo gris 10% */
+/* Fondo del sitio: colorido y “game”, sin ser pastel */
 [data-md-color-scheme="default"] .md-main,
 body[data-md-color-scheme="default"] .md-main,
 html[data-md-color-scheme="default"] .md-main{
   background:
-    linear-gradient(0deg, var(--light-gray-overlay), var(--light-gray-overlay)),
-    radial-gradient(900px 600px at 15% 0%, rgba(111,138,181,0.28), transparent 60%),
-    radial-gradient(900px 650px at 85% 10%, rgba(206,145,174,0.20), transparent 62%),
-    linear-gradient(
-      180deg,
-      rgba(111,138,181,0.18) 0%,
-      rgba(174,171,196,0.14) 38%,
-      rgba(217,191,204,0.18) 100%
-    ),
-    var(--md-default-bg-color);
+    /* glow colorido */
+    radial-gradient(1000px 700px at 12% 10%, rgba(29,78,216,0.30), transparent 60%),
+    radial-gradient(900px 650px at 88% 12%, rgba(22,163,74,0.22), transparent 62%),
+    radial-gradient(900px 650px at 55% 95%, rgba(234,179,8,0.18), transparent 60%),
+
+    /* textura sutil tipo “grid” (muy ligera) */
+    linear-gradient(rgba(15,23,42,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,0.06) 1px, transparent 1px),
+
+    /* base */
+    #eaf2ff !important;
+
+  background-size:
+    auto,
+    auto,
+    auto,
+    64px 64px,
+    64px 64px,
+    auto;
+
+  background-attachment: fixed;
 }
 
-/* ✅ Navbar/Tabs: más “sólido” y legible (sin distopía) */
+/* Header/Tabs con color (no corporativo) */
 [data-md-color-scheme="default"] .md-header,
-body[data-md-color-scheme="default"] .md-header,
-html[data-md-color-scheme="default"] .md-header,
 [data-md-color-scheme="default"] .md-tabs,
+body[data-md-color-scheme="default"] .md-header,
 body[data-md-color-scheme="default"] .md-tabs,
+html[data-md-color-scheme="default"] .md-header,
 html[data-md-color-scheme="default"] .md-tabs{
   background:
-    linear-gradient(0deg, var(--light-gray-overlay), var(--light-gray-overlay)),
-    linear-gradient(
-      90deg,
-      rgba(107,138,182,0.22),
-      rgba(174,171,196,0.18),
-      rgba(206,145,174,0.18)
+    linear-gradient(90deg,
+      rgba(29,78,216,0.35),
+      rgba(22,163,74,0.25),
+      rgba(234,179,8,0.18)
     ),
-    rgba(248,246,249,0.88);
+    rgba(255,255,255,0.70) !important;
+  border-bottom: 1px solid rgba(15,23,42,0.14);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(31,41,55,0.10);
 }
 
-/* ✅ Fuerza legibilidad del texto/íconos del header */
+/* Texto del header legible */
 [data-md-color-scheme="default"] .md-header__title,
 [data-md-color-scheme="default"] .md-header__button,
-[data-md-color-scheme="default"] .md-tabs__link,
-body[data-md-color-scheme="default"] .md-header__title,
-body[data-md-color-scheme="default"] .md-header__button,
-body[data-md-color-scheme="default"] .md-tabs__link,
-html[data-md-color-scheme="default"] .md-header__title,
-html[data-md-color-scheme="default"] .md-header__button,
-html[data-md-color-scheme="default"] .md-tabs__link{
-  color: rgba(31,41,55,0.88);
+[data-md-color-scheme="default"] .md-tabs__link{
+  color: rgba(15,23,42,0.92) !important;
 }
 
-/* Tabs active/hover */
-[data-md-color-scheme="default"] .md-tabs__link:hover,
-[data-md-color-scheme="default"] .md-tabs__link--active,
-body[data-md-color-scheme="default"] .md-tabs__link:hover,
-body[data-md-color-scheme="default"] .md-tabs__link--active,
-html[data-md-color-scheme="default"] .md-tabs__link:hover,
-html[data-md-color-scheme="default"] .md-tabs__link--active{
-  color: #4f6f9a;
-}
-
-/* ✅ “Tarjeta” del contenido: también con velo gris 10% */
+/* ✅ CLAVE: contenido NO blanco -> transparente/glass */
 [data-md-color-scheme="default"] .md-content__inner,
 body[data-md-color-scheme="default"] .md-content__inner,
 html[data-md-color-scheme="default"] .md-content__inner{
-  background:
-    linear-gradient(0deg, var(--light-gray-overlay), var(--light-gray-overlay)),
-    rgba(255,255,255,0.64);
-  border: 1px solid rgba(31,41,55,0.10);
+  background: transparent !important;          /* <- lo que pedías */
+  border: 1px solid rgba(15,23,42,0.14);
   border-radius: 18px;
-  box-shadow: 0 10px 28px rgba(31,41,55,0.06);
-  padding: 1.05rem 1.1rem;
+  box-shadow: 0 18px 44px rgba(15,23,42,0.10);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: relative;
 }
 
-@media (max-width: 44.9375em) {
-  [data-md-color-scheme="default"] .md-content__inner,
-  body[data-md-color-scheme="default"] .md-content__inner,
-  html[data-md-color-scheme="default"] .md-content__inner{
-    border-radius: 14px;
-    padding: .85rem .85rem;
-  }
+/* capa “glass” interna (no es blanco sólido) */
+[data-md-color-scheme="default"] .md-content__inner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: inherit;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
 }
 
-/* Navegación lateral: hover/activo */
-[data-md-color-scheme="default"] .md-nav__link:hover,
-[data-md-color-scheme="default"] .md-nav__link--active,
-body[data-md-color-scheme="default"] .md-nav__link:hover,
-body[data-md-color-scheme="default"] .md-nav__link--active,
-html[data-md-color-scheme="default"] .md-nav__link:hover,
-html[data-md-color-scheme="default"] .md-nav__link--active{
-  color: #4f6f9a;
+/* Sidebar/nav con vida */
+[data-md-color-scheme="default"] .md-nav__link:hover{
+  background: linear-gradient(90deg, rgba(29,78,216,0.18), rgba(22,163,74,0.12)) !important;
+  border-radius: 10px;
+}
+[data-md-color-scheme="default"] .md-nav__link--active{
+  background: linear-gradient(90deg, rgba(22,163,74,0.18), rgba(29,78,216,0.12)) !important;
+  border-radius: 10px;
+}
+
+/* Botón primary más “juego” */
+[data-md-color-scheme="default"] .md-typeset .md-button--primary{
+  background: linear-gradient(90deg, rgba(29,78,216,0.95), rgba(22,163,74,0.85)) !important;
+  border: 0 !important;
+  color: #fff !important;
+  border-radius: 14px;
+}
+
+/* Search sin caja gris */
+[data-md-color-scheme="default"] .md-search__form{
+  background: rgba(255,255,255,0.55) !important;
+  border: 1px solid rgba(15,23,42,0.14);
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+[data-md-color-scheme="default"] .md-content__inner::before{ background: linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0.10)); }
+/* ======================================================
+   FIXES (LIGHT): Search text + Sidebar title contrast
+   (pegar AL FINAL)
+   ====================================================== */
+
+/* 1) Searchbar: texto y placeholder visibles */
+[data-md-color-scheme="default"] .md-search__input,
+[data-md-color-scheme="default"] .md-search__input::placeholder{
+  color: rgba(15, 23, 42, 0.92) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="default"] .md-search__input::placeholder{
+  color: rgba(15, 23, 42, 0.55) !important;
+}
+
+/* iconos del search */
+[data-md-color-scheme="default"] .md-search__icon,
+[data-md-color-scheme="default"] .md-search__icon svg{
+  color: rgba(15, 23, 42, 0.75) !important;
+  fill: rgba(15, 23, 42, 0.75) !important;
+}
+
+/* fondo del search (por si el blur lo deja raro) */
+[data-md-color-scheme="default"] .md-search__form{
+  background: rgba(255,255,255,0.68) !important;
+  border: 1px solid rgba(15,23,42,0.16) !important;
+}
+
+
+/* ======================================================
+   FIX (LIGHT): Sidebar title visible sin caja fea
+   - Quita la placa/cuadrado
+   - Deja un underline + contraste suave
+   ====================================================== */
+
+/* Quitar el “cuadro” si lo pusimos antes */
+[data-md-color-scheme="default"] .md-nav__title{
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Texto del título (AdventureOne) más visible */
+[data-md-color-scheme="default"] .md-nav__title,
+[data-md-color-scheme="default"] .md-nav__title .md-ellipsis,
+[data-md-color-scheme="default"] .md-nav__title .md-nav__button{
+  color: rgba(15, 23, 42, 0.96) !important;
+  text-shadow: none !important;
+  font-weight: 800 !important;
+  letter-spacing: .2px;
+}
+
+/* Subrayado “game” suave (no caja) */
+[data-md-color-scheme="default"] .md-nav__title .md-ellipsis{
+  display: inline-block;
+  padding-bottom: .25rem;
+  border-bottom: 2px solid rgba(29,78,216,0.38);  /* azul */
+}
+
+/* Detallito extra: mini brillo debajo (muy sutil) */
+[data-md-color-scheme="default"] .md-nav__title .md-ellipsis{
+  background-image: linear-gradient(90deg, rgba(29,78,216,0.18), rgba(22,163,74,0.14));
+  background-size: 100% 6px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
 }

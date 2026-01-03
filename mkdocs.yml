@@ -51,7 +51,7 @@ hooks:
 
 extra_css:
   - styles/light.css
-  - styles/theme.css
+  - styles/dark.css
   - styles/kanban.css
 
 docs_dir: docs

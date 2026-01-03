@@ -1,10 +1,9 @@
 /* ======================================================
-   BASE + DARK THEME: "Arcade Calm"
-   - Funciona aunque el atributo data-md-color-scheme
-     esté en body o en html.
+   DARK THEME: "Arcade Calm"
+   - Solo afecta a scheme: slate
    ====================================================== */
 
-/* ---------- Base (aplica siempre) ---------- */
+/* ---------- Base ---------- */
 :root{
   --game-radius: 18px;
   --game-shadow: 0 10px 28px rgba(31,41,55,.08);
@@ -23,8 +22,7 @@ html[data-md-color-scheme="slate"] .md-tabs{
   border-bottom-color: rgba(229,231,235,0.10);
 }
 
-/* ---------- DARK (scheme: slate) ---------- */
-/* ✅ variables (coge scheme en cualquier nodo) */
+/* ---------- Variables DARK ---------- */
 [data-md-color-scheme="slate"],
 body[data-md-color-scheme="slate"],
 html[data-md-color-scheme="slate"]{
@@ -35,10 +33,10 @@ html[data-md-color-scheme="slate"]{
   --md-primary-bg-color: #e5e7eb;
   --md-primary-bg-color--light: rgba(229,231,235,0.72);
 
-  --md-accent-fg-color: #a78bfa; /* violeta suave */
+  --md-accent-fg-color: #a78bfa;
   --md-accent-fg-color--transparent: rgba(167,139,250,0.14);
 
-  --md-typeset-a-color: #22d3ee; /* cyan */
+  --md-typeset-a-color: #22d3ee;
 
   --md-default-bg-color: #070a14;
   --md-default-fg-color: #e5e7eb;
@@ -49,7 +47,7 @@ html[data-md-color-scheme="slate"]{
   --md-code-bg-color: rgba(167,139,250,0.10);
 }
 
-/* Fondo oscuro con glow sutil */
+/* ---------- Fondo DARK ---------- */
 [data-md-color-scheme="slate"] .md-main,
 body[data-md-color-scheme="slate"] .md-main,
 html[data-md-color-scheme="slate"] .md-main{
@@ -60,7 +58,7 @@ html[data-md-color-scheme="slate"] .md-main{
     var(--md-default-bg-color);
 }
 
-/* Header dark */
+/* ---------- Header DARK ---------- */
 [data-md-color-scheme="slate"] .md-header,
 body[data-md-color-scheme="slate"] .md-header,
 html[data-md-color-scheme="slate"] .md-header,
@@ -76,24 +74,9 @@ html[data-md-color-scheme="slate"] .md-tabs{
   backdrop-filter: blur(10px);
 }
 
-/* Fallback: si no existe data-md-color-scheme, al menos oscuro por OS */
-@media (prefers-color-scheme: dark){
-  .md-main{
-    background:
-      radial-gradient(1000px 600px at 12% 8%, rgba(167,139,250,0.16), transparent 60%),
-      radial-gradient(1000px 600px at 88% 12%, rgba(34,211,238,0.12), transparent 60%),
-      radial-gradient(1000px 700px at 50% 95%, rgba(244,114,182,0.10), transparent 60%),
-      #070a14;
-  }
-}
+/* ---------- Callouts (Obsidian-like) ---------- */
 
-
-/* ======================================================
-   Obsidian-like blue callouts (Material admonitions)
-   - Vale para LIGHT y DARK (con override slate)
-   ====================================================== */
-
-/* LIGHT */
+/* LIGHT (por si se queda aquí por error, no molesta) */
 .md-typeset .admonition.info,
 .md-typeset .admonition.note,
 .md-typeset details.info,
@@ -110,7 +93,7 @@ html[data-md-color-scheme="slate"] .md-tabs{
   color: rgba(17, 24, 39, 0.92);
 }
 
-/* DARK (slate) */
+/* DARK override */
 [data-md-color-scheme="slate"] .md-typeset .admonition.info,
 [data-md-color-scheme="slate"] .md-typeset .admonition.note,
 [data-md-color-scheme="slate"] .md-typeset details.info,
