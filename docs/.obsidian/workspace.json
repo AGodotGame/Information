@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "24a563f4dc5e6e74",
+        "id": "1e5c91f8abe7bf34",
         "type": "tabs",
         "children": [
           {
-            "id": "e5fc52f5bb4ad85d",
+            "id": "549a1b90f156f060",
             "type": "leaf",
             "state": {
               "type": "kanban",
@@ -193,13 +193,17 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "e5fc52f5bb4ad85d",
+  "active": "549a1b90f156f060",
   "lastOpenFiles": [
-    "Research/Developments/Dibujo y estilo necesitado.md",
+    "styles/kb_tags.css",
+    "styles/kb_user_tags.css",
+    "Reunion para ver resultados de los juegos.md",
     "Research/Tareas.md",
+    "styles/extra.css",
     "Research/Developments/Presupuestar servidor.md",
-    "Research/Developments/Hacer cambios para añadir personas a las tareas.md",
+    "Research/Developments/Dibujo y estilo necesitado.md",
     "Research/Developments/Reunion para ver resultados de los juegos @{2026-01-05}.md",
+    "Research/Developments/Hacer cambios para añadir personas a las tareas.md",
     "Research/Developments/Hacer busqueda de funcionamiento de i18n.md",
     "Basic knowledge/Commit organization (WIP).md",
     "styles/dark.css",
@@ -226,11 +230,7 @@
     "styles/theme.css",
     "styles/themes.css",
     "assets",
-    "Untitled.md",
     "API",
-    "Information",
-    "Research/Información a tener en cuenta.md",
-    "Research/Archived",
     "Research/Untitled.canvas"
   ]
 }
