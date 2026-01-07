@@ -41,6 +41,31 @@
       "tagKey": "#KNOWLEDGE",
       "color": "rgba(137, 193, 250, 1)",
       "backgroundColor": "rgba(48, 108, 241, 0.1)"
+    },
+    {
+      "tagKey": "#Ddobre",
+      "color": "rgba(183, 183, 183, 1)",
+      "backgroundColor": "rgba(162, 116, 55, 1)"
+    },
+    {
+      "tagKey": "#Ibouabdi",
+      "color": "rgba(183, 183, 183, 1)",
+      "backgroundColor": "rgba(92, 56, 160, 0.85)"
+    },
+    {
+      "tagKey": "#Pmasia",
+      "color": "rgba(183, 183, 183, 1)",
+      "backgroundColor": "rgba(154, 23, 172, 0.94)"
+    },
+    {
+      "tagKey": "#Fiscalidad",
+      "color": "rgba(146, 255, 140, 1)",
+      "backgroundColor": "rgba(114, 255, 115, 0.1)"
+    },
+    {
+      "tagKey": "#ORGANIZATION",
+      "color": "rgba(255, 151, 56, 1)",
+      "backgroundColor": "rgba(252, 184, 57, 0.1)"
     }
   ],
   "move-tags": false,

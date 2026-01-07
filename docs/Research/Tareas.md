@@ -6,15 +6,17 @@ kanban-plugin: board
 
 ## Desarrollo
 
+- [ ] [[Dibujo y estilo necesitado]] #Fiscalidad #ORGANIZATION #Pmasia #Ddobre #Ibouabdi @{2026-01-09}
+- [ ] [[Presupuestar servidor]] #Fiscalidad #ORGANIZATION #Pmasia #Ibouabdi @{2026-01-11}
 - [ ] [[Hacer busqueda de funcionamiento de i18n]]
-	#KNOWLEDGE @{2026-01-18}
+	#KNOWLEDGE @{2026-01-18} #Pmasia
 - [ ] [[Hacer cambios para añadir personas a las tareas]]
-	#DOCUMENTATION @{2026-01-06}
+	#DOCUMENTATION #Ddobre #Ibouabdi @{2026-01-10}
 
 
 ## To do
 
-- [ ] [[Reunion para ver resultados de los juegos ]] #GAME @{2026-01-05}
+- [ ] [[Reunion para ver resultados de los juegos ]] #GAME @{2026-01-17}
 
 
 ## En proceso
