@@ -4,5 +4,12 @@
   "API": { "bg": "#ffcf001a", "fg": "#ffde00" },
   "GAME": { "bg": "#01ff1b1a", "fg": "#00fe3f" },
   "DOCUMENTATION": { "bg": "#ee1b1b1a", "fg": "#e00000" },
-  "KNOWLEDGE": { "bg": "#306cf11a", "fg": "#89c1fa" }
+  "KNOWLEDGE": { "bg": "#306cf11a", "fg": "#89c1fa" },
+  "Fiscalidad":{ "bg": "#72ff731a", "fg": "#92ff8c"},
+  "ORGANIZATION": { "bg": "#fcb8391a", "fg": "#ff9738" },
+  
+
+  "DDOBRE": { "bg": "#a27437", "fg": "#b7b7b7" },
+  "IBOUABDI": { "bg": "#5c38a0d9", "fg": "#b7b7b7" },
+  "PMASIA": { "bg": "#9a17acf0", "fg": "#b7b7b7" }
 }

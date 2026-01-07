@@ -53,6 +53,8 @@ extra_css:
   - styles/kanban.css
   - styles/light.css
   - styles/dark.css
-
+  - stylesheets/kb_user_tags.css
+  - stylesheets/kb_tags.css
+  
 docs_dir: docs
 

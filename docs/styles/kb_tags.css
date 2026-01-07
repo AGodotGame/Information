@@ -1,0 +1,22 @@
+/* ======================
+   KB - NORMAL TAGS
+   ====================== */
+
+.kb-tagfilter[data-kb-tag="API"]           { --tg-bg:#ffcf001a; --tg-fg:#ffde00; }
+.kb-tagfilter[data-kb-tag="GAME"]          { --tg-bg:#01ff1b1a; --tg-fg:#00fe3f; }
+.kb-tagfilter[data-kb-tag="DOCUMENTATION"] { --tg-bg:#ee1b1b1a; --tg-fg:#e00000; }
+.kb-tagfilter[data-kb-tag="KNOWLEDGE"]     { --tg-bg:#306cf11a; --tg-fg:#89c1fa; }
+
+/* (Opcional) chips dentro de tarjeta si usas data-tag="..." */
+.kb-chip.kb-tag[data-tag="API"]{
+  background-color:#ffcf001a; color:#ffde00; border-color:#ffde00;
+}
+.kb-chip.kb-tag[data-tag="GAME"]{
+  background-color:#01ff1b1a; color:#00fe3f; border-color:#00fe3f;
+}
+.kb-chip.kb-tag[data-tag="DOCUMENTATION"]{
+  background-color:#ee1b1b1a; color:#e00000; border-color:#e00000;
+}
+.kb-chip.kb-tag[data-tag="KNOWLEDGE"]{
+  background-color:#306cf11a; color:#89c1fa; border-color:#89c1fa;
+}

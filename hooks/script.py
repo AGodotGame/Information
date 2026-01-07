@@ -1,5 +1,4 @@
-KB_SCRIPT = r"""
-<script>
+KB_SCRIPT = r"""<script>
 (function(){
   const wrap = document.querySelector('[data-kb-wrap="1"]');
   if(!wrap) return;
@@ -11,24 +10,52 @@ KB_SCRIPT = r"""
 
   const archEl = wrap.querySelector('[data-kb-toggle="archived"]');
   const onlyArchEl = wrap.querySelector('[data-kb-toggle="onlyarchived"]');
+  const doneColEl = wrap.querySelector('[data-kb-toggle="donecol"]');
 
   const tagBtns = Array.from(wrap.querySelectorAll('[data-kb-tag]'));
+  const userBtns = Array.from(wrap.querySelectorAll('[data-kb-user]'));
 
   const cols = Array.from(wrap.querySelectorAll('.kb-col'));
   const activeTags = new Set();
+  const activeUsers = new Set();
+
+  // recordar estado de "ver completadas" cuando activas "solo archivados"
+  let doneBeforeOnlyArchived = null;
 
   function norm(s){ return (s||"").toString().trim().toLowerCase(); }
+
+  function applyDoneColMode(){
+    const showDone = !!(doneColEl && doneColEl.checked);
+    wrap.classList.toggle('kb-show-done', showDone);
+  }
+
+  function syncDoneWithOnlyArchived(){
+    const only = !!(onlyArchEl && onlyArchEl.checked);
+    if(!doneColEl) return;
+
+    if(only){
+      if(doneBeforeOnlyArchived === null){
+        doneBeforeOnlyArchived = doneColEl.checked;
+      }
+      doneColEl.checked = true;       // ✅ forzar ON
+      doneColEl.disabled = true;      // opcional: evitar inconsistencias
+    } else {
+      if(doneBeforeOnlyArchived !== null){
+        doneColEl.checked = doneBeforeOnlyArchived;  // restaurar
+        doneBeforeOnlyArchived = null;
+      }
+      doneColEl.disabled = false;
+    }
+  }
 
   function applyArchiveModes(){
     const only = !!(onlyArchEl && onlyArchEl.checked);
 
-    // ✅ Si "Solo archivados" está activo, fuerza mostrar archivados y oculta el resto
     wrap.classList.toggle('kb-only-archived', only);
 
     const show = !!(archEl && archEl.checked);
     wrap.classList.toggle('kb-show-archived', show || only);
 
-    // Opcional: bloquear "Ver archivados" cuando solo-archivados está ON
     if(archEl){
       if(only){
         archEl.checked = true;
@@ -37,6 +64,10 @@ KB_SCRIPT = r"""
         archEl.disabled = false;
       }
     }
+
+    // ✅ si solo archivados está activo => completadas también
+    syncDoneWithOnlyArchived();
+    applyDoneColMode();
   }
 
   function parseISO(d){
@@ -70,6 +101,7 @@ KB_SCRIPT = r"""
       cards.forEach(card => {
         const title = norm(card.getAttribute('data-title'));
         const tags = (card.getAttribute('data-tags') || "").split(',').filter(Boolean);
+        const users = (card.getAttribute('data-users') || "").split(',').filter(Boolean);
         const dates = (card.getAttribute('data-dates') || "").split(',').filter(Boolean);
         const statuses = (card.getAttribute('data-statuses') || "").split(',').filter(Boolean);
         const hasDates = (card.getAttribute('data-hasdates') || "0") === "1";
@@ -81,6 +113,11 @@ KB_SCRIPT = r"""
           okTag = tags.some(t => activeTags.has(t));
         }
 
+        let okUser = true;
+        if(activeUsers.size > 0){
+          okUser = users.some(u => activeUsers.has(u));
+        }
+
         let okDate = true;
         if(status === "nodate"){
           okDate = !hasDates;
@@ -90,7 +127,7 @@ KB_SCRIPT = r"""
           okDate = statuses.includes(status);
         }
 
-        const ok = okTitle && okTag && okDate;
+        const ok = okTitle && okTag && okUser && okDate;
 
         card.classList.toggle('kb-hidden', !ok);
         if(ok) visibleCount++;
@@ -103,7 +140,6 @@ KB_SCRIPT = r"""
     });
   }
 
-  // ✅ Tags toggle: al activar se “enciende” (clase is-active)
   tagBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const t = btn.getAttribute('data-kb-tag');
@@ -111,8 +147,23 @@ KB_SCRIPT = r"""
       if(activeTags.has(t)){
         activeTags.delete(t);
         btn.classList.remove('is-active');
-      }else{
+      } else {
         activeTags.add(t);
+        btn.classList.add('is-active');
+      }
+      applyFilters();
+    });
+  });
+
+  userBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const u = btn.getAttribute('data-kb-user');
+      if(!u) return;
+      if(activeUsers.has(u)){
+        activeUsers.delete(u);
+        btn.classList.remove('is-active');
+      } else {
+        activeUsers.add(u);
         btn.classList.add('is-active');
       }
       applyFilters();
@@ -124,8 +175,12 @@ KB_SCRIPT = r"""
     el.addEventListener(ev, cb);
   }
 
-  // init
-  applyArchiveModes();
+  // ✅ init: por defecto completadas OFF (si no está solo-archivados)
+  if(doneColEl){
+    doneColEl.checked = false;
+  }
+
+  applyArchiveModes(); // aquí ya fuerza completadas si solo-archivados está ON
   applyFilters();
 
   bind(qEl, 'input', applyFilters);
@@ -136,7 +191,7 @@ KB_SCRIPT = r"""
   if(archEl) bind(archEl, 'change', () => { applyArchiveModes(); applyFilters(); });
   if(onlyArchEl) bind(onlyArchEl, 'change', () => { applyArchiveModes(); applyFilters(); });
 
+  if(doneColEl) bind(doneColEl, 'change', () => { applyDoneColMode(); applyFilters(); });
+
 })();
-</script>
-"""
-    
+</script>"""

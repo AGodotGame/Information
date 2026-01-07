@@ -8,10 +8,8 @@ kanban-plugin: board
 
 - [ ] [[Dibujo y estilo necesitado]] #Fiscalidad #ORGANIZATION #Pmasia #Ddobre #Ibouabdi @{2026-01-09}
 - [ ] [[Presupuestar servidor]] #Fiscalidad #ORGANIZATION #Pmasia #Ibouabdi @{2026-01-11}
-- [ ] [[Hacer busqueda de funcionamiento de i18n]]
-	#KNOWLEDGE @{2026-01-18} #Pmasia
-- [ ] [[Hacer cambios para añadir personas a las tareas]]
-	#DOCUMENTATION #Ddobre #Ibouabdi @{2026-01-10}
+- [ ] [[Hacer busqueda de funcionamiento de i18n]] #KNOWLEDGE @{2026-01-18} #Pmasia
+- [ ] [[Hacer cambios para añadir personas a las tareas]] #DOCUMENTATION #Ddobre #Ibouabdi @{2026-01-10}
 
 
 ## To do

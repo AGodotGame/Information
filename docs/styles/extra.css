@@ -1,0 +1,34 @@
+/* --- Header móvil: título arriba, logo debajo --- */
+@media (max-width: 600px) {
+  /* El contenedor del header */
+  .md-header__inner {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Título a ancho completo y arriba */
+  .md-header__title {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 0.15rem 0 0;
+  }
+
+  /* Logo debajo del título y centrado */
+  .md-header__button.md-logo {
+    order: 3;
+    margin: 0.25rem auto 0.35rem;
+  }
+
+  /* Botón menú (hamburguesa) el primero */
+  .md-header__button.md-icon[for="__drawer"] {
+    order: 1;
+  }
+
+  /* Si te “salta” el buscador o repo icon, manténlos al final */
+  .md-header__source,
+  .md-search {
+    order: 4;
+  }
+}

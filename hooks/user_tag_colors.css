@@ -1,0 +1,14 @@
+.kb-tagfilter[data-kb-user="Ddobre"]   { --tg-bg:#a27437;   --tg-fg:#b7b7b7; }
+.kb-tagfilter[data-kb-user="Pmasia"]   { --tg-bg:#9a17acf0; --tg-fg:#b7b7b7; }
+.kb-tagfilter[data-kb-user="Ibouabdi"] { --tg-bg:#5c38a0d9; --tg-fg:#b7b7b7; }
+
+/* chips de tarjetas (usuarios) */
+.kb-chip.kb-tag.kb-tag-user[data-tag="Ddobre"]{
+  background-color:#a27437; color:#b7b7b7; border-color:#b7b7b7;
+}
+.kb-chip.kb-tag.kb-tag-user[data-tag="Pmasia"]{
+  background-color:#9a17acf0; color:#b7b7b7; border-color:#b7b7b7;
+}
+.kb-chip.kb-tag.kb-tag-user[data-tag="Ibouabdi"]{
+  background-color:#5c38a0d9; color:#b7b7b7; border-color:#b7b7b7;
+}
